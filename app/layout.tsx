@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import FadeInObserver from "./components/FadeInObserver";
 
 export default function RootLayout({
   children,
@@ -11,6 +12,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
+        <FadeInObserver />
         {children}
         <Footer />
       </body>
