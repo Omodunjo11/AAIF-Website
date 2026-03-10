@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Leadership | AAIF — Africa AI Fellowship",
+  description:
+    "Meet the leadership behind CADER and the Africa AI Fellowship, including regulatory scholars and institutional reform practitioners.",
+};
+
 export default function LeadershipPage() {
   return (
     <>

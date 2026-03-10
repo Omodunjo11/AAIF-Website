@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Apply | AAIF — Africa AI Fellowship",
+  description:
+    "Apply to the Africa AI Fellowship 2026 cohort in Abuja, with fully covered stipend, accommodation, flights, and visa.",
+};
+
 export default function ApplyPage() {
   return (
     <>
