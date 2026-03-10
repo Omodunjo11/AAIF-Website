@@ -11,13 +11,15 @@ export default function Navbar() {
     const nav = document.getElementById("nav");
 
     const handleScroll = () => {
-      nav?.classList.toggle("scrolled", window.scrollY > 40);
+      if (!nav) return;
+      nav.classList.toggle("scrolled", window.scrollY > 40);
     };
 
+    handleScroll(); // run once on mount
     window.addEventListener("scroll", handleScroll);
-    nav?.classList.add("scrolled");
-
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const navItems = [
@@ -39,7 +41,7 @@ export default function Navbar() {
         {navItems.map((item) => {
           const isActive =
             pathname === item.href ||
-            (item.href !== "/" && pathname.startsWith(item.href));
+            pathname === `${item.href}/`;
 
           return (
             <li key={item.href}>
