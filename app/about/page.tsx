@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About | AAIF — Africa AI Fellowship",
+  description:
+    "Learn about CADER and the institutional foundations behind the Africa AI Fellowship, focusing on AI, digital justice, and economic rights.",
+};
+
 export default function AboutPage() {
   return (
     <>

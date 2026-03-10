@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "AAIF — Africa AI Fellowship",
+  description:
+    "Africa AI Fellowship is a continental platform for applied AI leadership, deploying AI inside live institutions across Africa.",
+};
+
 export default function HomePage() {
   return (
     <>

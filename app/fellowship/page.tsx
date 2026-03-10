@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Fellowship | AAIF — Africa AI Fellowship",
+  description:
+    "Explore the Africa AI Fellowship experience, tracks, and applied deployment journey for fellows working inside live institutions.",
+};
+
 export default function FellowshipPage() {
   return (
     <>

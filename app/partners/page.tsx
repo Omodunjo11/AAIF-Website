@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Partners | AAIF — Africa AI Fellowship",
+  description:
+    "Discover the partner ecosystem behind the Africa AI Fellowship, spanning academic, government, civil society, continental, and private sector institutions.",
+};
+
 export default function PartnersPage() {
   return (
     <>
