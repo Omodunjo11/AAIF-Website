@@ -1,22 +1,36 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const pathname = usePathname();
+  const navRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
-    const nav = document.getElementById("nav");
+    const nav = navRef.current;
+    if (!nav) return;
 
-    const handleScroll = () => {
-      if (!nav) return;
+    let ticking = false;
+
+    const updateScrollState = () => {
       nav.classList.toggle("scrolled", window.scrollY > 40);
+      ticking = false;
     };
 
-    handleScroll(); // run once on mount
-    window.addEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(updateScrollState);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    // Correct initial state
+    updateScrollState();
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -32,7 +46,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav id="nav">
+    <nav ref={navRef}>
       <Link href="/" className="nav-wordmark">
         AAIF <span>/</span> CADER
       </Link>
@@ -41,13 +55,14 @@ export default function Navbar() {
         {navItems.map((item) => {
           const isActive =
             pathname === item.href ||
-            pathname === `${item.href}/`;
+            (item.href !== "/" &&
+              pathname.startsWith(item.href + "/"));
 
           return (
             <li key={item.href}>
               <Link
                 href={item.href}
-                className={isActive ? "active" : ""}
+                className={isActive ? "active" : undefined}
               >
                 {item.name}
               </Link>
