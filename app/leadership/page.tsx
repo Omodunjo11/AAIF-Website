@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Leadership | AAIF — Africa AI Fellowship",
   description:
-    "Meet the leadership and featured profiles supporting CADER and AAIF, including Dr. Sam Amadi, Emmanuel Orjih, Onaolapo Odunjo, and Gaelle Conille.",
+    "Meet the leadership behind CADER and AAIF, including Dr. Sam Amadi, Emmanuel Orjih, Onaolapo Odunjo, and Gaelle Conille.",
 };
 
 export default function LeadershipPage() {
@@ -11,7 +11,7 @@ export default function LeadershipPage() {
     <>
       <section className="leadership-hero">
         <div className="section-wrap">
-          <div className="eyebrow fade-in">Leadership & Featured Profiles</div>
+          <div className="eyebrow fade-in">Programme Leadership</div>
           <h1 className="display-title fade-in">
             Institutional builders.
             <br />
@@ -83,51 +83,19 @@ export default function LeadershipPage() {
               </div>
             </div>
 
-            <div className="profile-meta">
-              Philadelphia / New York · AI systems, platform infrastructure, monetization
-            </div>
-
             <div className="lf-body">
               <div className="lf-bio">
                 Product and platform leader focused on turning complex AI and
-                data systems into measurable enterprise outcomes. Experience
-                across Amazon, Capital One, TD Bank, and venture-backed builds,
-                with repeated success leading monetization, adoption, and
-                compliance-ready scale in regulated environments.
+                data systems into measurable enterprise outcomes across Amazon,
+                Kinage, Capital One, and TD Bank. Identified a $148M ARR
+                opportunity across 1.17M+ subscribers at Amazon, built Kinage
+                from zero to 12 enterprise clients while reducing cost-to-serve
+                by 62% and improving first-pass resolution by 41%, owned pricing
+                and roadmap strategy for a $270M analytics/API platform serving
+                200+ teams at Capital One, and led AI-enabled enterprise
+                transformation across 15+ business units at TD Bank with VP/SVP
+                governance and full audit traceability.
               </div>
-            </div>
-
-            <ul className="profile-highlights">
-              <li>
-                Amazon: identified a <strong>$148M ARR</strong> opportunity across
-                1.17M+ subscribers and translated insights into pricing,
-                onboarding, and retention strategy.
-              </li>
-              <li>
-                Kinage: built commercial model and GTM from zero to 12 enterprise
-                clients, reducing cost-to-serve by <strong>62%</strong> while
-                improving first-pass resolution by <strong>41%</strong>.
-              </li>
-              <li>
-                Capital One: owned roadmap and pricing strategy for a
-                <strong> $270M</strong> analytics/API platform serving 200+ teams;
-                improved retention and unlocked major financial impact.
-              </li>
-              <li>
-                TD Bank: led AI-enabled enterprise transformation across 15+
-                business units with governance at VP/SVP level and full audit
-                traceability.
-              </li>
-            </ul>
-
-            <div className="profile-links">
-              <a href="mailto:omodunjo@wharton.upenn.edu">omodunjo@wharton.upenn.edu</a>
-              <a href="https://www.linkedin.com/in/onaolapomichaelodunjo" target="_blank" rel="noreferrer">
-                LinkedIn
-              </a>
-              <a href="https://github.com/Omodunjo11" target="_blank" rel="noreferrer">
-                GitHub
-              </a>
             </div>
           </div>
 
@@ -144,38 +112,19 @@ export default function LeadershipPage() {
               </div>
             </div>
 
-            <div className="profile-meta">
-              Washington, DC · Gates Foundation · World Bank · J-PAL alum
-            </div>
-
             <div className="lf-body">
               <div className="lf-bio">
                 Operator focused on organizational effectiveness and mission
-                execution. Works at the intersection of people strategy,
-                institutional performance, and social impact, with experience
-                advising senior leaders and translating evidence into action.
+                execution at the intersection of people strategy, institutional
+                performance, and social impact. Nearly a decade of experience
+                across the Gates Foundation, World Bank, and MIT&apos;s J-PAL,
+                with a Wharton MBA focus on organizational effectiveness and
+                institution-building. Former Summer Associate at the Rockefeller
+                Foundation (Communities, Partners & Impact) supporting change
+                management and inclusive leadership strategy, with strong
+                regional grounding in Latin America, the Caribbean, and Africa.
               </div>
             </div>
-
-            <ul className="profile-highlights">
-              <li>
-                Nearly a decade across high-impact institutions including the
-                Gates Foundation, World Bank, and MIT&apos;s J-PAL.
-              </li>
-              <li>
-                Wharton MBA with a focus on organizational effectiveness and
-                institution-building for lasting outcomes.
-              </li>
-              <li>
-                Summer Associate, Rockefeller Foundation (Communities, Partners
-                & Impact), supporting change management and inclusive leadership
-                strategy.
-              </li>
-              <li>
-                Strong regional connection to Latin America, the Caribbean, and
-                Africa, with a systems-first approach to mission delivery.
-              </li>
-            </ul>
           </div>
 
           <div className="leadership-note fade-in">
