@@ -77,24 +77,20 @@ export default function LeadershipPage() {
                 <div className="lf-title">Senior Product Manager, AI Systems & Enterprise Adoption</div>
               </div>
               <div className="lf-credentials">
-                <div className="lf-cred">Wharton MBA &apos;26</div>
-                <div className="lf-cred">Columbia M.S.</div>
-                <div className="lf-cred">Product & GTM</div>
+                <div className="lf-cred">Wharton MBA &rsquo;26 | Columbia M.S.</div>
               </div>
             </div>
 
             <div className="lf-body">
               <div className="lf-bio">
-                Product and platform leader focused on turning complex AI and
-                data systems into measurable enterprise outcomes across Amazon,
-                Kinage, Capital One, and TD Bank. Identified a $148M ARR
-                opportunity across 1.17M+ subscribers at Amazon, built Kinage
-                from zero to 12 enterprise clients while reducing cost-to-serve
-                by 62% and improving first-pass resolution by 41%, owned pricing
-                and roadmap strategy for a $270M analytics/API platform serving
-                200+ teams at Capital One, and led AI-enabled enterprise
-                transformation across 15+ business units at TD Bank with VP/SVP
-                governance and full audit traceability.
+                Product and platform leader focused on deploying AI systems at
+                enterprise scale across Amazon, Capital One, TD Bank, and
+                Kinage. Known for translating complex data and machine learning
+                capabilities into scalable products that drive adoption and
+                operational impact. Co-founder of Kova and builder of
+                enterprise platforms from inception to deployment. His work sits
+                at the intersection of AI, product strategy, and enterprise
+                transformation.
               </div>
             </div>
           </div>
@@ -107,22 +103,19 @@ export default function LeadershipPage() {
               </div>
               <div className="lf-credentials">
                 <div className="lf-cred">Wharton MBA</div>
-                <div className="lf-cred">Org Effectiveness</div>
-                <div className="lf-cred">Mission-Driven Systems</div>
               </div>
             </div>
 
             <div className="lf-body">
               <div className="lf-bio">
-                Operator focused on organizational effectiveness and mission
-                execution at the intersection of people strategy, institutional
-                performance, and social impact. Nearly a decade of experience
-                across the Gates Foundation, World Bank, and MIT&apos;s J-PAL,
-                with a Wharton MBA focus on organizational effectiveness and
-                institution-building. Former Summer Associate at the Rockefeller
-                Foundation (Communities, Partners & Impact) supporting change
-                management and inclusive leadership strategy, with strong
-                regional grounding in Latin America, the Caribbean, and Africa.
+                Operator focused on building high-performing organizations and
+                mission-driven systems across global institutions. Experience
+                spans the Gates Foundation, World Bank, and MIT J-PAL, with
+                work across Africa, Latin America, and the Caribbean. Most
+                recently supported change management and inclusive leadership
+                initiatives at the Rockefeller Foundation. Focused on
+                strengthening institutions and delivering measurable social
+                impact.
               </div>
             </div>
           </div>
