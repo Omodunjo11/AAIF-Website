@@ -832,6 +832,15 @@ footer {
   font-size: 0.93rem;
 }
 
+.footer-contact-item {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.footer-contact-item:last-child {
+  margin-bottom: 0;
+}
+
 .footer-links-title,
 .footer-contact-title {
   color: var(--gold-soft);
