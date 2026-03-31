@@ -31,6 +31,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -157,6 +158,9 @@ a {
 .mobile-nav-list a {
   color: var(--text-soft);
   font-size: 0.95rem;
+  display: block;
+  min-height: 44px;
+  padding: 0.5rem 0;
 }
 
 .mobile-nav-list a.active,
@@ -895,7 +899,7 @@ footer {
   }
 
   .mobile-nav.open {
-    max-height: 340px;
+    max-height: 520px;
     border-top-color: rgba(212, 180, 106, 0.18);
   }
 
@@ -947,17 +951,80 @@ footer {
   .nav-shell {
     height: 4.7rem;
     width: calc(100% - 1.2rem);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
   }
 
   .hero-left {
     width: calc(100% - 1.2rem);
-    min-height: calc(100vh - 4.7rem);
-    padding-top: 5.1rem;
+    min-height: calc(100svh - 4.7rem);
+    padding-top: 4.8rem;
+    padding-bottom: 4rem;
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
   }
 
   .section-wrap {
     width: calc(100% - 1.2rem);
-    padding: 4.3rem 0;
+    padding: 3.8rem 0;
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  .display-title {
+    font-size: clamp(1.9rem, 10vw, 2.7rem);
+    line-height: 0.98;
+  }
+
+  .hero-h1 {
+    font-size: clamp(2.6rem, 13vw, 4rem);
+    line-height: 0.88;
+  }
+
+  .hero-overline {
+    font-size: 0.71rem;
+    letter-spacing: 0.12em;
+  }
+
+  .hero-tagline {
+    font-size: 1rem;
+  }
+
+  .body-text {
+    margin-top: 1rem;
+    font-size: 0.98rem;
+  }
+
+  .quick-glance {
+    gap: 0.65rem;
+  }
+
+  .glance-card,
+  .fact-card,
+  .track-panel,
+  .phase,
+  .output-card,
+  .project-row,
+  .partner-tier,
+  .pt-card,
+  .leader-full,
+  .timeline-item,
+  .apply-table,
+  .posting-meta,
+  .leadership-note,
+  .activation-note {
+    padding: 0.95rem;
+  }
+
+  .nav-menu-btn {
+    min-height: 44px;
+    padding: 0.45rem 0.95rem;
+  }
+
+  .mobile-nav-list {
+    width: calc(100% - 1.2rem);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
   }
 
   .hero-actions {
@@ -967,10 +1034,18 @@ footer {
   .btn-gold,
   .btn-ghost {
     width: 100%;
+    min-height: 48px;
+    padding: 0.85rem 1rem;
   }
 
   .apply-row {
     grid-template-columns: 1fr;
     gap: 0.35rem;
+  }
+
+  .footer-inner {
+    width: calc(100% - 1.2rem);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
   }
 }
