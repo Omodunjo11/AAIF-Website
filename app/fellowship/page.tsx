@@ -1,45 +1,44 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Fellowship | AAIF — Africa AI Fellowship",
   description:
-    "Explore the Africa AI Fellowship experience, tracks, and applied deployment journey for fellows working inside live institutions.",
+    "Explore AAIF structure, tracks, support, eligibility, and the applied deployment model in Abuja, Nigeria.",
 };
 
 export default function FellowshipPage() {
   return (
     <>
-      {/* ================= FELLOWSHIP PAGE ================= */}
       <section className="fellow-hero">
         <div className="section-wrap">
-          <div className="eyebrow">The Fellowship Experience</div>
-          <h1 className="display-title">
+          <div className="eyebrow fade-in">The Fellowship Experience</div>
+          <h1 className="display-title fade-in">
             A structured, applied
             <br />
             leadership platform.
             <br />
-            <em>Not a course.</em>
+            <em>Built for execution.</em>
           </h1>
 
-          <p className="body-text" style={{ maxWidth: "620px", marginTop: "2rem" }}>
-            Fellows work on live deployments inside real institutional environments,
-            producing outputs designed for immediate adoption.
+          <p className="body-text fade-in">
+            AAIF brings together African and international talent to build and
+            deploy AI systems in real institutional contexts across sectors.
           </p>
         </div>
       </section>
 
-      {/* TRACKS */}
-      <section style={{ background: "var(--ink)" }}>
+      <section>
         <div className="section-wrap">
-          <div className="eyebrow">Two Tracks</div>
-          <h2 className="display-title">
+          <div className="eyebrow fade-in">Two Tracks</div>
+          <h2 className="display-title fade-in">
             Choose your
             <br />
             <em>commitment level</em>
           </h2>
 
-          <div className="fellow-tracks-grid" style={{ marginTop: "3rem" }}>
-            <div className="track-panel">
+          <div className="fellow-tracks-grid">
+            <div className="track-panel fade-in">
               <div className="track-months">
                 3 <span>months</span>
               </div>
@@ -47,20 +46,20 @@ export default function FellowshipPage() {
               <div className="track-name">Associate Fellowship</div>
 
               <div className="track-desc">
-                A focused, intensive placement embedded in a working project team.
-                Associates contribute to defined deliverables within their assigned track.
+                A focused placement for fellows with shorter availability.
+                Associates are embedded in live project teams and contribute to
+                specific deliverables.
               </div>
 
               <ul className="track-features">
-                <li>Live institutional project team</li>
-                <li>Monthly stipend + accommodation</li>
-                <li>All flights and visa covered</li>
-                <li>Africa AI Fellow title</li>
-                <li>Induction into Fellows Network</li>
+                <li>In-person residency in Abuja</li>
+                <li>Monthly stipend and housing</li>
+                <li>Meals, flights, and visa covered</li>
+                <li>Project transfer into alumni network</li>
               </ul>
             </div>
 
-            <div className="track-panel featured">
+            <div className="track-panel featured fade-in">
               <div className="track-months">
                 6 <span>months</span>
               </div>
@@ -69,70 +68,69 @@ export default function FellowshipPage() {
 
               <div className="track-desc">
                 The flagship track combining preparation, embedded deployment,
-                and applied delivery across a complete project cycle.
+                and complete cycle delivery with stronger team leadership
+                expectations.
               </div>
 
               <ul className="track-features">
-                <li>Full project ownership</li>
-                <li>Team leadership responsibility</li>
-                <li>Venture formation pathways</li>
-                <li>Investor introductions</li>
-                <li>Priority access to partner roles</li>
+                <li>Greater ownership across project lifecycle</li>
+                <li>Execution leadership responsibilities</li>
+                <li>Venture and partner adoption pathways</li>
+                <li>Priority opportunity flow in AAIF network</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* JOURNEY */}
       <section className="journey-section">
         <div className="section-wrap">
-          <div className="eyebrow">Fellowship Arc</div>
-          <h2 className="display-title">
+          <div className="eyebrow fade-in">Fellowship Arc</div>
+          <h2 className="display-title fade-in">
             Defined execution
             <br />
             <em>from start to finish</em>
           </h2>
 
           <div className="journey-phases">
-            <div className="phase">
+            <div className="phase fade-in">
               <div className="phase-left">
                 <div className="phase-badge">Phase I</div>
                 <div className="phase-title">Induction</div>
-                <div className="phase-timing">Weeks 1–3</div>
+                <div className="phase-timing">Opening stage</div>
               </div>
               <div className="phase-right">
                 <div className="phase-desc">
-                  Institutional briefings, sector deep dives,
-                  project assignment, governance alignment.
+                  Institutional orientation, partner briefings, and project team
+                  matching.
                 </div>
               </div>
             </div>
 
-            <div className="phase">
+            <div className="phase fade-in">
               <div className="phase-left">
                 <div className="phase-badge">Phase II</div>
                 <div className="phase-title">Embedded Deployment</div>
-                <div className="phase-timing">Core Programme</div>
+                <div className="phase-timing">Core program</div>
               </div>
               <div className="phase-right">
                 <div className="phase-desc">
-                  Weekly sprint reviews, stakeholder alignment,
-                  iterative product development, institutional testing.
+                  Team sprints, stakeholder reviews, iterative build cycles, and
+                  live deployment testing.
                 </div>
               </div>
             </div>
 
-            <div className="phase">
+            <div className="phase fade-in">
               <div className="phase-left">
                 <div className="phase-badge">Phase III</div>
                 <div className="phase-title">Delivery & Handover</div>
-                <div className="phase-timing">Final Weeks</div>
+                <div className="phase-timing">Final stage</div>
               </div>
               <div className="phase-right">
                 <div className="phase-desc">
-                  Tool finalisation, documentation,
-                  institutional adoption, public convening.
+                  Finalization, documentation, partner handover, and transition to
+                  alumni or continuation pathways.
                 </div>
               </div>
             </div>
@@ -140,44 +138,56 @@ export default function FellowshipPage() {
         </div>
       </section>
 
-      {/* OUTPUTS */}
       <section className="outputs-section">
         <div className="section-wrap">
-          <div className="eyebrow">What Fellows Produce</div>
-          <h2 className="display-title">
+          <div className="eyebrow fade-in">What Fellows Produce</div>
+          <h2 className="display-title fade-in">
             Deployment
             <br />
             <em>is the standard</em>
           </h2>
 
           <div className="outputs-grid">
-            <div className="output-card">
+            <div className="output-card fade-in">
               <div className="oc-type">Technical</div>
-              <div className="oc-title">AI Decision-Support Systems</div>
+              <div className="oc-title">Working AI Tools</div>
               <div className="oc-desc">
-                Working tools adopted inside real institutions.
+                Decision-support utilities and operational systems deployed in
+                partner environments.
               </div>
             </div>
 
-            <div className="output-card">
-              <div className="oc-type">Regulatory</div>
-              <div className="oc-title">Monitoring Dashboards</div>
+            <div className="output-card fade-in">
+              <div className="oc-type">Policy</div>
+              <div className="oc-title">Frameworks and Briefs</div>
               <div className="oc-desc">
-                AI-enabled oversight tools for regulators.
+                Governance frameworks, institutional designs, and policy products
+                suitable for real adoption.
               </div>
             </div>
 
-            <div className="output-card">
+            <div className="output-card fade-in">
               <div className="oc-type">Venture</div>
-              <div className="oc-title">AI-Enabled Ventures</div>
+              <div className="oc-title">MVPs and Venture Pathways</div>
               <div className="oc-desc">
-                Commercial pathways for high-potential outputs.
+                Pilot products and civic ventures with potential for continuation
+                after the cohort.
               </div>
             </div>
+          </div>
+
+          <div className="fellow-bottom-cta fade-in">
+            <p>
+              Fellows who complete either track are conferred the title
+              <strong> Africa AI Fellow</strong> and inducted into the Africa AI
+              Fellows Network.
+            </p>
+            <Link href="/apply" className="btn-gold">
+              View Application Details
+            </Link>
           </div>
         </div>
       </section>
     </>
   );
 }
-

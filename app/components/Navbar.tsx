@@ -1,12 +1,13 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const pathname = usePathname();
   const navRef = useRef<HTMLElement | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     const nav = navRef.current;
@@ -46,35 +47,69 @@ export default function Navbar() {
   ];
 
   return (
-    <nav ref={navRef}>
-      <Link href="/" className="nav-wordmark">
-        AAIF <span>/</span> CADER
-      </Link>
+    <nav ref={navRef} className="site-nav">
+      <div className="nav-shell">
+        <Link href="/" className="nav-wordmark">
+          AAIF <span>/</span> CADER
+        </Link>
 
-      <ul className="nav-links">
-        {navItems.map((item) => {
-          const isActive =
-            pathname === item.href ||
-            (item.href !== "/" &&
-              pathname.startsWith(item.href + "/"));
+        <button
+          type="button"
+          className="nav-menu-btn"
+          onClick={() => setMobileOpen((prev) => !prev)}
+          aria-label="Toggle menu"
+          aria-expanded={mobileOpen}
+        >
+          Menu
+        </button>
 
-          return (
-            <li key={item.href}>
-              <Link
-                href={item.href}
-                className={isActive ? "active" : undefined}
-              >
-                {item.name}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+        <ul className="nav-links">
+          {navItems.map((item) => {
+            const isActive =
+              pathname === item.href ||
+              (item.href !== "/" && pathname.startsWith(item.href + "/"));
 
-      <Link href="/apply" className="nav-apply-btn">
-        Apply
-      </Link>
+            return (
+              <li key={item.href}>
+                <Link href={item.href} className={isActive ? "active" : undefined}>
+                  {item.name}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+
+        <Link href="/apply" className="nav-apply-btn">
+          Apply
+        </Link>
+      </div>
+
+      <div className={`mobile-nav ${mobileOpen ? "open" : ""}`}>
+        <ul className="mobile-nav-list">
+          {navItems.map((item) => {
+            const isActive =
+              pathname === item.href ||
+              (item.href !== "/" && pathname.startsWith(item.href + "/"));
+
+            return (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className={isActive ? "active" : undefined}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            );
+          })}
+          <li>
+            <Link href="/apply" className="active-cta" onClick={() => setMobileOpen(false)}>
+              Apply
+            </Link>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 }
-

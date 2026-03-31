@@ -19,7 +19,7 @@ export default function Footer() {
           <div className="footer-sub">
             Africa AI Fellowship
             <br />
-            Center for AI, Digital Justice, and Economic Rights
+            Center for AI, Digital Justice and Economic Rights
             <br />
             2 Mwanza Close, Wuse Zone 3, Abuja
           </div>
@@ -38,22 +38,24 @@ export default function Footer() {
 
         <div>
           <div className="footer-contact-title">Contact</div>
-          <div className="footer-contact-item">
+          <a className="footer-contact-item" href="mailto:fellowship@caderafrica.org">
             fellowship@caderafrica.org
-          </div>
-          <div className="footer-contact-item">
+          </a>
+          <a className="footer-contact-item" href="mailto:partnerships@caderafrica.org">
             partnerships@caderafrica.org
-          </div>
-          <div className="footer-contact-item">
+          </a>
+          <a className="footer-contact-item" href="mailto:emmanuel@caderafrica.org">
             emmanuel@caderafrica.org
-          </div>
+          </a>
+          <a className="footer-contact-item" href="https://caderafrica.org" target="_blank" rel="noreferrer">
+            caderafrica.org
+          </a>
         </div>
       </div>
 
       <div className="footer-bottom">
-        Africa AI Fellowship — Cohort 1, 2026
+        Africa AI Fellowship - Cohort 1, 2026
       </div>
     </footer>
   );
 }
-

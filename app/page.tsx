@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "AAIF — Africa AI Fellowship",
   description:
-    "Africa AI Fellowship is a continental platform for applied AI leadership, deploying AI inside live institutions across Africa.",
+    "A selective, fully funded applied fellowship by CADER for AI, social impact, and venture execution in Abuja, Nigeria.",
 };
 
 export default function HomePage() {
   return (
     <>
-      {/* ================= HOME PAGE ================= */}
-      <section style={{ position: "relative", overflow: "hidden" }}>
-        {/* SVG BACKGROUND */}
+      <section className="hero-section">
         <div className="hero-canvas">
           <svg
             viewBox="0 0 1400 900"
@@ -20,12 +19,12 @@ export default function HomePage() {
           >
             <defs>
               <radialGradient id="rg1" cx="70%" cy="40%">
-                <stop offset="0%" stopColor="#1f4a28" stopOpacity="0.5" />
+                <stop offset="0%" stopColor="#355f43" stopOpacity="0.48" />
                 <stop offset="100%" stopColor="#0c0c0b" stopOpacity="0" />
               </radialGradient>
 
               <radialGradient id="rg2" cx="20%" cy="80%">
-                <stop offset="0%" stopColor="#b8963c" stopOpacity="0.08" />
+                <stop offset="0%" stopColor="#c9a45b" stopOpacity="0.12" />
                 <stop offset="100%" stopColor="#0c0c0b" stopOpacity="0" />
               </radialGradient>
             </defs>
@@ -38,8 +37,8 @@ export default function HomePage() {
               x="680"
               y="780"
               fontFamily="Cormorant Garamond, serif"
-              fontSize="700"
-              fill="rgba(31,74,40,0.07)"
+              fontSize="660"
+              fill="rgba(205, 171, 97, 0.08)"
               fontWeight="300"
               textAnchor="middle"
             >
@@ -48,7 +47,7 @@ export default function HomePage() {
           </svg>
         </div>
 
-        <div className="hero-left">
+        <div className="hero-left fade-in">
           <div className="hero-overline">
             Est. 2025 • Abuja, Nigeria • Cohort 1 — June 2026
           </div>
@@ -56,25 +55,87 @@ export default function HomePage() {
           <h1 className="hero-h1">
             Africa
             <br />
-            <span className="italic">AI</span>
+            <span className="hero-italic">AI</span>
             <br />
             Fellowship
           </h1>
 
           <p className="hero-tagline">
-            A continental platform for applied AI leadership.
-            Fellows deploy artificial intelligence inside live institutions
-            across Africa's most consequential sectors.
+            A selective, fully funded fellowship where fellows deploy AI in
+            live environments across government, private sector, and civil
+            society.
           </p>
 
           <div className="hero-actions">
-            <a href="/apply" className="btn-gold">
-              Apply — April 1, 2026
-            </a>
+            <Link href="/apply" className="btn-gold">
+              Apply now (priority deadline: April 1, 2026)
+            </Link>
 
-            <a href="/fellowship" className="btn-ghost">
-              The Fellowship
-            </a>
+            <Link href="/fellowship" className="btn-ghost">
+              Explore the Fellowship
+            </Link>
+          </div>
+
+          <div className="quick-glance">
+            <div className="glance-card">
+              <strong>Tracks</strong>
+              <span>Associate (3 months) and Full (6 months)</span>
+            </div>
+            <div className="glance-card">
+              <strong>Support</strong>
+              <span>Stipend, housing, flights, meals, and visa covered</span>
+            </div>
+            <div className="glance-card">
+              <strong>Host</strong>
+              <span>CADER, Center for AI, Digital Justice and Economic Rights</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="section-wrap">
+          <div className="eyebrow fade-in">Fellowship At A Glance</div>
+          <div className="home-facts-grid">
+            {[
+              ["Start Date", "June 1, 2026"],
+              ["Location", "Abuja, Nigeria (fully residential)"],
+              ["Format", "In-person"],
+              ["Focus", "AI, Social Impact, Ventures"],
+              ["Application", "Resume + cover letter to fellowship@caderafrica.org"],
+              ["Primary Contact", "Emmanuel Orjih, Founding Director"],
+            ].map(([key, value]) => (
+              <article className="fact-card fade-in" key={key}>
+                <h3>{key}</h3>
+                <p>{value}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="alt-surface">
+        <div className="section-wrap">
+          <div className="eyebrow fade-in">For University Partners</div>
+          <div className="split-panel">
+            <div className="fade-in">
+              <h2 className="display-title">
+                Frontier experience
+                <br />
+                for the AI era.
+              </h2>
+              <p className="body-text">
+                The program gives students applied work at the intersection of AI
+                governance, digital justice, and economic development in
+                fast-moving, resource-constrained environments.
+              </p>
+            </div>
+            <ul className="bullet-list fade-in">
+              <li>Portfolio-grade outputs: policy briefs, prototypes, and tools</li>
+              <li>Field exposure across public, civic, and commercial institutions</li>
+              <li>Access to cross-country networks and emerging talent pipelines</li>
+              <li>Professional signaling for policy, tech, and development careers</li>
+            </ul>
           </div>
         </div>
       </section>

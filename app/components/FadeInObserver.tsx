@@ -4,19 +4,27 @@ import { useEffect } from "react";
 
 export default function FadeInObserver() {
   useEffect(() => {
-    const elements = document.querySelectorAll(".fade-in");
-    const timeouts: ReturnType<typeof setTimeout>[] = [];
+    const elements = Array.from(
+      document.querySelectorAll<HTMLElement>(".fade-in")
+    );
+
+    // Assign deterministic DOM-based delay
+    elements.forEach((el, i) => {
+      el.style.setProperty("--stagger-delay", `${i * 60}ms`);
+      el.dataset.animated = "false";
+    });
 
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry, index) => {
-          if (entry.isIntersecting) {
-            const timeout = setTimeout(() => {
-              entry.target.classList.add("visible");
-            }, index * 60);
+        entries.forEach((entry) => {
+          const el = entry.target as HTMLElement;
 
-            timeouts.push(timeout);
-          }
+          if (!entry.isIntersecting) return;
+          if (el.dataset.animated === "true") return;
+
+          el.classList.add("visible");
+          el.dataset.animated = "true";
+          observer.unobserve(el);
         });
       },
       { threshold: 0.08 }
@@ -24,10 +32,7 @@ export default function FadeInObserver() {
 
     elements.forEach((el) => observer.observe(el));
 
-    return () => {
-      observer.disconnect();
-      timeouts.forEach(clearTimeout);
-    };
+    return () => observer.disconnect();
   }, []);
 
   return null;
